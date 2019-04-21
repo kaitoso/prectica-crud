@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-body">
+    <form #formProducto="ngForm" (ngSubmit)="onSubmit(formProducto)">
+      <div class="form-group">
+        <input type="text" 
+        class="form-control" 
+        name="nombre" 
+        #nombre="ngModel"      
+        [(ngModel)]="ProductoService.selectedProduct.nombre"
+        placeholder="agrega nombre de producto...">
+      </div>
+        
+      <div class="form-group">
+          <input type="text" 
+          class="form-control"
+          name="cantidad" 
+          #cantidad="ngModel" 
+           
+          [(ngModel)]="ProductoService.selectedProduct.cantidad"
+          placeholder="agrega cantidad de productos...">
+        </div>
+
+        <div class="form-group">
+            <input type="text" 
+            class="form-control" 
+            name="precio" 
+            #precio="ngModel" 
+            
+            [(ngModel)]="ProductoService.selectedProduct.precio"
+            placeholder="agrega precio del producto...">
+          </div>
+    </form>
+  </div>
+</div>

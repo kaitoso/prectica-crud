@@ -1,5 +1,6 @@
 <ul>
   <li *ngFor="let user of usuarios">
-     {{user}}
+     <app-usuarios [nombreUsuario]=user></app-usuarios>
+     
   </li>
 </ul>
